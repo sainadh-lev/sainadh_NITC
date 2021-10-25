@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainpage</title>
+</head>
+<body>
+    <h1>News</h1>
+    <% posts.forEach(function (ele) {%>
+        <h1><%= ele.tittle %></h1>
+        <p><%= ele.matter %></p>
+      <%}); %>
+      <h3><a href="/compose">New</a></h3>
+      <form action="/main" method="POST">
+        <input type="text" name="search"><br><br>
+        <button type="submit">search</button>
+    </form>
+</body>
+</html>
